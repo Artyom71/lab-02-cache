@@ -99,8 +99,8 @@ int main()
         }
 
         random_walk.push_back(output3(array, mas[j]));  //случайный обход
-        back_walk.push_back(output3(array, mas[j]));   //обратный обход
-        straight_walk.push_back(output3(array, mas[j])); //прямой обход
+        back_walk.push_back(output2(array, mas[j]));   //обратный обход
+        straight_walk.push_back(output1(array, mas[j])); //прямой обход
 
         delete[] array;
     }
