@@ -52,7 +52,7 @@ int output2(int mas[], int n)
     unsigned int start_time = clock();
     for (int j = 0; j < 1000; j++)
     {
-        straight(mas, n);
+        back(mas, n);
     }
     unsigned int end_time = clock();
     unsigned int search_time = end_time - start_time;
@@ -65,7 +65,7 @@ int output3(int mas[], int n)
     unsigned int start_time = clock();
     for (int j = 0; j < 1000; j++)
     {
-        straight(mas, n);
+        random(mas, n);
     }
     unsigned int end_time = clock();
     unsigned int search_time = end_time - start_time;
