@@ -1,6 +1,6 @@
 // Copyright 2018 Your Name <your_email>
 
-#include <header.hpp>
+#include <exsperiments.hpp>
 #include <iostream>
 #include <algorithm>
 #include <cstdlib>
@@ -11,39 +11,39 @@
 using namespace std;
 
 
-void straight(vector <int> mas)
+void straight(vector <int64_t> mas)
 {
-    for (vector<int>::iterator iter = mas.begin(); iter != mas.end(); ++iter)
+    for (vector<int64_t>::iterator iter = mas.begin(); iter != mas.end(); ++iter)
     {
         *iter = *iter + 17;
     }
     mas.clear();
 }
-void back(vector <int> mas)
+void back(vector <int64_t> mas)
 {
-    for (vector<int>::iterator  iter = mas.end() - 1; iter != mas.begin(); --iter)
-    {
-        *iter = *iter + 17;
-    }
-    mas.clear();
-}
-
-void random(vector <int> mas)
-{
-    for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
+    for (vector<int64_t>::iterator  iter = mas.end() - 1; iter != mas.begin(); --iter)
     {
         *iter = *iter + 17;
     }
     mas.clear();
 }
 
-int output1(vector <int> mas)
+void random(vector <int64_t> mas)
+{
+    for (vector<int64_t>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
+    {
+        *iter = *iter + 17;
+    }
+    mas.clear();
+}
+
+int output1(vector <int64_t> mas)
 {
     straight(mas);  // прогревание кэша
     unsigned int start_time = clock();
-    for (unsigned int j = 0; j < 1000; ++j)
+    for (size_t j = 0; j < 1000; ++j)
     {
-        for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
+        for (vector<int64_t>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
         {
             *iter = *iter + 17;
         }
@@ -53,13 +53,13 @@ int output1(vector <int> mas)
 
     return search_time;
 }
-int output2(vector <int> mas)
+int output2(vector <int64_t> mas)
 {
     back(mas);  // прогревание кэша
     unsigned int start_time = clock();
-    for (unsigned int j = 0; j < 1000; ++j)
+    for (size_t j = 0; j < 1000; ++j)
     {
-        for (vector<int>::iterator iter = mas.end() - 1; iter != mas.begin(); --iter)
+        for (vector<int64_t>::iterator iter = mas.end() - 1; iter != mas.begin(); --iter)
         {
             *iter = *iter + 17;
         }
@@ -68,7 +68,7 @@ int output2(vector <int> mas)
     unsigned int search_time = end_time - start_time;
     return search_time;
 }
-int output3(vector <int> mas)
+int output3(vector <int64_t> mas)
 {
     random(mas);  // прогревание кэша
 
@@ -76,9 +76,9 @@ int output3(vector <int> mas)
 
     random_shuffle(mas.begin(), mas.end());
 
-    for (unsigned int j = 0; j < 1000; ++j)
+    for (size_t j = 0; j < 1000; ++j)
     {
-        for (vector<int>::iterator iter = mas.begin(); iter != mas.end(); ++iter)
+        for (vector<int64_t>::iterator iter = mas.begin(); iter != mas.end(); ++iter)
         {
             *iter = *iter + 17;
         }
@@ -97,7 +97,7 @@ void exsperiments::dimensionts()
     j = 2;
     for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
     {
-        *iter = (j * 128 * 1024) / 4;
+        *iter = (j * 128 * 1024) / sizeof(int64_t);
         j = j * 2;
     }
 
@@ -117,13 +117,13 @@ int exsperiments::number_of_experiments()
 
 void exsperiments::exsperiment()
 {
-    vector <int> array;
+    vector <int64_t> array;
     for (vector<int>::iterator  iter1 = mas.begin(); iter1 != mas.end(); ++iter1)
     {
         array.resize(*iter1);  //установка размера массива
 
         //заполнение массива рандомными числами
-        for (vector<int>::iterator  iter = array.begin(); iter != array.end(); ++iter)
+        for (vector<int64_t>::iterator  iter = array.begin(); iter != array.end(); ++iter)
         {
             *iter = rand() % 20;
         }
@@ -146,7 +146,7 @@ void  exsperiments::stop()
         cout << "  travel_variant: " << *it << " " << endl;
         cout << "  experiments:" << endl;
         int r1 = 128;
-        for (unsigned int i = 0; i < j; i++)
+        for (size_t i = 0; i < j; i++)
         {
             cout << "  - experiment:" << endl;
             cout << "      number: " << i + 1 << endl;
@@ -170,14 +170,4 @@ void  exsperiments::stop()
 
 
     }
-}
-
-int main()
-{  // 1 int = 4 байт, 1kb = 1024 b
-    //int n1 = 32768; int r1 = 128; // 128 kb = 131072 b (1/2 от первого уровня)
-    //int n = 2359296; int r5 = 9216; // 9216 kb = 9437184 b (3/2 третьего уровня)
-
-    srand(time(0));
-    exsperiments Te;
-    return 0;
 }
