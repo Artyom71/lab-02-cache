@@ -13,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e92d476b-053c-4249-8e9f-886bcbb1fd46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sources/source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/source.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +90,7 @@
       <workItem from="1571615470086" duration="1671000" />
       <workItem from="1571617236400" duration="735000" />
       <workItem from="1571722882897" duration="1155000" />
-      <workItem from="1572170638268" duration="422000" />
+      <workItem from="1572170638268" duration="1075000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <created>1571610698126</created>
@@ -134,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571723164147</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test8">
+      <created>1572171071600</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572171071600</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +176,7 @@
     <MESSAGE value="test5" />
     <MESSAGE value="test6" />
     <MESSAGE value="test7" />
-    <option name="LAST_COMMIT_MESSAGE" value="test7" />
+    <MESSAGE value="test8" />
+    <option name="LAST_COMMIT_MESSAGE" value="test8" />
   </component>
 </project>
