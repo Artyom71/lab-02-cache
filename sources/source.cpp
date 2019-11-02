@@ -1,4 +1,3 @@
-#include "pch.h"
 #include <iostream>
 #include <algorithm>
 #include <cstdlib>
@@ -41,7 +40,10 @@ int output1(vector <int> mas)
 	unsigned int start_time = clock();
 	for (unsigned int j = 0; j < 1000; ++j)
 	{
-		straight(mas);
+		for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+		{
+			*iter = *iter + 17;
+		}
 	}
 	unsigned int end_time = clock();
 	unsigned int search_time = end_time - start_time;
@@ -54,7 +56,10 @@ int output2(vector <int> mas)
 	unsigned int start_time = clock();
 	for (unsigned int j = 0; j < 1000; ++j)
 	{
-		back(mas);
+		for (auto iter = mas.end() - 1; iter != mas.begin(); --iter)
+		{
+			*iter = *iter + 17;
+		}
 	}
 	unsigned int end_time = clock();
 	unsigned int search_time = end_time - start_time;
@@ -70,7 +75,10 @@ int output3(vector <int> mas)
 
 	for (unsigned int j = 0; j < 1000; ++j)
 	{
-		random(mas);
+		for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+		{
+			*iter = *iter + 17;
+		}
 	}
 	unsigned int end_time = clock();
 	unsigned int search_time = end_time - start_time;
