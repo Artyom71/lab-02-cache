@@ -136,9 +136,9 @@ int exsperiments::number_of_experiments()
 void exsperiments::exsperiment()
 {
     vector <int> array;
-    for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
+    for (vector<int>::iterator  iter1 = mas.begin(); iter1 != mas.end(); ++iter1)
     {
-        array.resize(*iter);  //установка размера массива
+        array.resize(*iter1);  //установка размера массива
 
         //заполнение массива рандомными числами
         for (vector<int>::iterator  iter = array.begin(); iter != array.end(); ++iter)
