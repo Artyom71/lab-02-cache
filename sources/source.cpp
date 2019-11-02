@@ -10,7 +10,7 @@ using namespace std;
 
 void straight(vector <int> mas)
 {
-	for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+	for (vector<int>::iterator iter = mas.begin(); iter != mas.end(); ++iter)
 	{
 		*iter = *iter + 17;
 	}
@@ -18,7 +18,7 @@ void straight(vector <int> mas)
 }
 void back(vector <int> mas)
 {
-	for (auto iter = mas.end() - 1; iter != mas.begin(); --iter)
+	for (vector<int>::iterator  iter = mas.end() - 1; iter != mas.begin(); --iter)
 	{
 		*iter = *iter + 17;
 	}
@@ -27,7 +27,7 @@ void back(vector <int> mas)
 
 void random(vector <int> mas)
 {
-	for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+	for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
 	{
 		*iter = *iter + 17;
 	}
@@ -40,7 +40,7 @@ int output1(vector <int> mas)
 	unsigned int start_time = clock();
 	for (unsigned int j = 0; j < 1000; ++j)
 	{
-		for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+		for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
 		{
 			*iter = *iter + 17;
 		}
@@ -56,7 +56,7 @@ int output2(vector <int> mas)
 	unsigned int start_time = clock();
 	for (unsigned int j = 0; j < 1000; ++j)
 	{
-		for (auto iter = mas.end() - 1; iter != mas.begin(); --iter)
+		for (vector<int>::iterator iter = mas.end() - 1; iter != mas.begin(); --iter)
 		{
 			*iter = *iter + 17;
 		}
@@ -75,7 +75,7 @@ int output3(vector <int> mas)
 
 	for (unsigned int j = 0; j < 1000; ++j)
 	{
-		for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+		for (vector<int>::iterator iter = mas.begin(); iter != mas.end(); ++iter)
 		{
 			*iter = *iter + 17;
 		}
@@ -110,7 +110,7 @@ void exsperiments::dimensionts()
 	int j = number_of_experiments();
 	mas.resize(j);
 	j = 2;
-	for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+	for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
 	{
 		*iter = (j * 128 * 1024) / 4;
 		j = j * 2;
@@ -133,12 +133,12 @@ int exsperiments::number_of_experiments()
 void exsperiments::exsperiment()
 {
 	vector <int> array;
-	for (auto iter = mas.begin(); iter != mas.end(); ++iter)
+	for (vector<int>::iterator  iter = mas.begin(); iter != mas.end(); ++iter)
 	{
 		array.resize(*iter);  //установка размера массива
 
 		 //заполнение массива рандомными числами
-		for (auto iter = array.begin(); iter != array.end(); ++iter)
+		for (vector<int>::iterator  iter = array.begin(); iter != array.end(); ++iter)
 		{
 			*iter = rand() % 20;
 		}
