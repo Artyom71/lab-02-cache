@@ -88,25 +88,7 @@ int output3(vector <int> mas)
     return search_time;
 }
 
-class exsperiments
-{
-private:
-    vector <int> random_walk;
-    vector <int> back_walk;
-    vector <int> straight_walk;
-    vector <int> mas;
-    void dimensionts();
-    int number_of_experiments();
-    void exsperiment();
-    void stop();
-public:
-    exsperiments()
-    {
-        dimensionts();
-        exsperiment();
-        stop();
-    }
-};
+
 
 void exsperiments::dimensionts()
 {
