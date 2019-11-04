@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="template" targetName="template" />
       <config projectName="template" targetName="tests" />
+      <config projectName="template" targetName="template" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -14,6 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e92d476b-053c-4249-8e9f-886bcbb1fd46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +92,7 @@
       <workItem from="1571617236400" duration="735000" />
       <workItem from="1571722882897" duration="1155000" />
       <workItem from="1572170638268" duration="1075000" />
+      <workItem from="1572902067474" duration="796000" />
     </task>
     <task id="LOCAL-00001" summary="test1">
       <created>1571610698126</created>
